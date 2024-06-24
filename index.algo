@@ -1,0 +1,22 @@
+ALGORITHM algo
+VAR
+   nc,nv,nm: INTEGER
+   c: STRING
+   nc:=0
+   nv:=0
+   nm:=0
+BEGIN
+   read(c)
+   WHILE (c<> ".") DO
+    IF (c=" ") THEN
+        nm=nm+1
+    END_IF
+    IF (c in ["a", "e","i","u","o","y","A","E","I", "U", "O","Y"]) THEN
+        nv=nv+1
+    END_IF
+    IF (c<> " ") THEN
+        nc=nc+1
+    END_IF
+   END_WHILE
+   write(nc,nm,nv)
+END
